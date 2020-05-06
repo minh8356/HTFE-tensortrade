@@ -77,6 +77,6 @@ performance = strategy.run(episodes=1000, evaluation=False)
 performance = pd.DataFrame(data = performance.T, columns = ('balance','net_worth',
                                                             'open_amount','price'))
 learning_curve = pd.Series(strategy._runner.episode_rewards)
-print('学习曲线:')
+print('Learning Chart:')
 learning_curve.plot()
-print('参数迭代次数:' + strategy.agent.updates)
+print('Learning loop times:' + strategy.agent.updates)
